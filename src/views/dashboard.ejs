@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/home.css">
+	<link rel="stylesheet" href="/css/products.css">
+	<title>Dashboard</title>
+	<style>
+		th,
+		tr,
+		td {
+			text-align: center;
+		}
+	</style>
+</head>
+
+<body>
+	<header class="header">
+		<h1>Unicsol pvt. ltd.</h1>
+		<nav class="navbar">
+			<ul>
+				<li><a href="/">Home</a></li>
+				<li><a href="/products">Products</a></li>
+				<li>
+					<form action="/logout" method="post">
+						<button type="submit">Logout</button>
+					</form>
+				</li>
+			</ul>
+		</nav>
+	</header> <br>
+	<h1 style="text-align: center;">Statement showing all users</h1>
+	<br>
+	<table>
+		<tr>
+			<th>S.No.</th>
+			<th>User id</th>
+			<th>User name</th>
+			<th>Email</th>
+			<th>Created At</th>
+		</tr>
+		<% users.forEach((user,index) => { %>
+		<tr>
+			<td><%= index+1 %></td>
+			<td><%= user.id %></td>
+			<td><%= user.name %></td>
+			<td><%= user.email %></td>
+			<td><%= new Date(user.createdAt).toISOString().slice(0, 10) %></td>
+		</tr>
+		<% }) %>
+	</table>
+
+
+</body>
+
+</html>

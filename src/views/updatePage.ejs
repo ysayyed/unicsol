@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Create product</title>
+	<link rel="stylesheet" href="/css/home.css">
+	<link rel="stylesheet" href="/css/createProduct.css">
+
+	<style>
+	</style>
+</head>
+
+<body>
+	<header class="header">
+		<h1>Unicsol pvt. ltd.</h1>
+		<nav class="navbar">
+			<ul>
+				<li><a href="/">Home</a></li>
+				<li><a href="/products">Products</a></li>
+				<li>
+					<form action="/logout" method="post">
+						<button type="submit">Logout</button>
+					</form>
+				</li>
+			</ul>
+		</nav>
+	</header> <br>
+	<fieldset class="productForm">
+		<form action="/products/update/<%= product.id %>" method="post">
+			<label for="name">Name</label>
+			<input type="text" name="name" id="name" value="<%= product.name %>">
+			<label for="price">Price</label>
+			<input type="number" name="price" id="price" value="<%= product.price %>">
+			<button type="submit">Submit</button>
+		</form>
+	</fieldset>
+
+</body>
+
+</html>

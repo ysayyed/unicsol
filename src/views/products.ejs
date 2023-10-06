@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/home.css">
+	<link rel="stylesheet" href="css/products.css">
+
+	<title>Products</title>
+</head>
+
+<body>
+	<header class="header">
+		<h1>Unicsol pvt. ltd.</h1>
+		<nav class="navbar">
+			<ul>
+				<li><a href="/">Home</a></li>
+				<li><a href="/dashboard">Dashboard</a></li>
+				<li>
+					<form action="/logout" method="post">
+						<button type="submit">Logout</button>
+					</form>
+				</li>
+			</ul>
+		</nav>
+	</header> <br>
+	<table>
+		<tr>
+			<th>S.No.</th>
+			<th>Product name</th>
+			<th>Price</th>
+			<th colspan="2">Actions</th>
+		</tr>
+		<% if (products.length > 0 ) { %>
+		<% products.forEach((product, index) => { %>
+		<tr id="<%= product.id %>">
+			<td><%= index+1 %></td>
+			<td><%= product.name %></td>
+			<td><%= product.price %></td>
+			<td>
+				<form action="/products/update/<%= product.id %>" method="get"><button>Edit</button></form>
+			</td>
+			<td>
+				<form action="/products/delete/<%= product.id %>" method="post"><button>Delete</button></form>
+			</td>
+		</tr>
+		<% }) %>
+		<td>
+		<td colspan="5">
+			<a href="/products/create">Add more Products</a>
+		</td>
+		</td>
+		<% } else { %>
+		<tr>
+			<td colspan="5">
+				<a href="/products/create">Add Products</a>
+			</td>
+		</tr>
+		<% } %>
+	</table>
+
+
+</body>
+
+</html>

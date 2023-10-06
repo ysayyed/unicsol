@@ -1,0 +1,53 @@
+* {
+	margin: 0;
+}
+
+body {
+	margin: 0 auto;
+}
+
+.header {
+	display: flex;
+	align-items: center;
+	background: #333;
+	justify-content: space-between;
+}
+
+.navbar {
+	display: flex;
+}
+
+.header > h1 {
+	margin-left: 20px;
+	color: white;
+}
+
+.navbar > ul {
+	display: flex;
+	gap: 2rem;
+	margin: 20px;
+}
+
+.navbar > ul > li {
+	list-style: none;
+}
+
+.navbar > ul > li > a {
+	text-decoration: none;
+	color: white;
+	padding: 2%;
+}
+
+.navbar > ul > li > a:hover {
+	color: dodgerblue;
+}
+
+.msg {
+	margin: 20px;
+	text-align: center;
+}
+
+.msg > h1 {
+	color: dodgerblue;
+	margin: 2%;
+}

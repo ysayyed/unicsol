@@ -1,0 +1,40 @@
+.productForm {
+	background-color: #333;
+	border: 1px solid #333;
+	width: 300px;
+	box-shadow: 1px 2px 5px #333;
+	border-radius: 20px;
+	margin: 0 auto;
+}
+
+.productForm > h1 {
+	color: palegreen;
+}
+
+.productForm > form > button {
+	margin: 10px 0px 10px 0;
+	background-color: seagreen;
+	outline: none;
+	border: none;
+	padding: 10px;
+	color: black;
+	font-size: medium;
+	font-weight: bold;
+}
+
+.productForm > form > button:hover {
+	background-color: palegreen;
+	cursor: pointer;
+}
+
+.productForm > form {
+	margin: 20px;
+	color: white;
+	justify-content: center;
+}
+
+.productForm > form > input {
+	width: 100%;
+	height: 25px;
+	margin: 10px 10px 10px 0;
+}

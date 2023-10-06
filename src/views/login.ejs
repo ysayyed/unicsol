@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/login.css">
+	<link rel="stylesheet" href="css/home.css">
+
+	<title>Login</title>
+</head>
+
+<body>
+	<header class="header">
+		<h1>Unicsol pvt. ltd.</h1>
+		<nav class="navbar">
+			<ul>
+				<li><a href="/">Home</a></li>
+				<li><a href="/login">Login</a></li>
+				<li><a href="/signup">Signup</a></li>
+			</ul>
+		</nav>
+	</header> <br>
+	<fieldset class="form">
+		<h1>User Login</h1> <br>
+		<hr>
+		<form action="/signin" method="post">
+			<label for="email">Email:</label><br>
+			<input type="email" id="email" name="email" required>
+			<br> <br>
+			<label for="password">Password:</label><br>
+			<input type="password" id="password" name="password" required>
+			<br> <br>
+			<button type="submit">Login</button>
+		</form>
+	</fieldset>
+</body>
+
+</html>
