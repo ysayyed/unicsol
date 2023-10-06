@@ -51,7 +51,7 @@ export class ProductController {
 		}
 		catch (error) {
 			res.status(400)
-			res.render('errorpage')
+			res.render('errorpage', { error })
 		}
 	}
 
@@ -67,7 +67,7 @@ export class ProductController {
 		}
 		catch (error) {
 			res.status(400)
-			res.render('errorpage')
+			res.render('errorpage', { error })
 		}
 	}
 }
